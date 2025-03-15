@@ -85,4 +85,4 @@ npx react-native run-ios
 
 ```
 
-Desenvolvido por [Macauly Vivaldo da Silva]
+### Desenvolvido por [Macauly Vivaldo da Silva]
