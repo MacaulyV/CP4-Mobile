@@ -1,97 +1,88 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Reajuste de Preço App 💸📱
 
-# Getting Started
+## Descrição do Projeto
+Esse projeto foi desenvolvido em React Native com TypeScript, e tem como objetivo facilitar o reajuste do preço de um produto. Nele, o usuário informa o nome do produto, o valor original e a porcentagem de aumento, e o app calcula automaticamente o novo valor. O fluxo é dividido em duas telas:
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+- **Tela de Formulário:** Onde o usuário insere os dados.
+- **Tela de Resultado:** Onde os cálculos são exibidos.
 
-## Step 1: Start Metro
+## Funcionalidades ✨
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### Formulário de Entrada 📝
+- Entrada para o nome do produto.
+- Campo para o valor original, com validação para aceitar apenas números.
+- Campo para a porcentagem de aumento, também com validação numérica.
+- Validações que garantem que nenhum campo fique vazio ou com caracteres inválidos.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Cálculo e Exibição de Resultado 🔢
+- Cálculo do valor do aumento e do novo valor do produto.
+- Exibição do valor original, do percentual aplicado, do valor do aumento e do novo valor.
+- Indicador visual que mostra o impacto do aumento.
 
-```sh
-# Using npm
-npm start
+### Navegação Entre Telas 🔄
+- Ao concluir o preenchimento e o cálculo, o app redireciona automaticamente para a tela de resultados.
+- Um botão “Ajustar Valores” permite voltar à tela de formulário com os dados já preenchidos, facilitando edições.
 
-# OR using Yarn
-yarn start
+### Animações e Feedback Visual 🎞️
+- Animações suaves nas transições e nos botões para melhorar a experiência do usuário.
+- Uso de efeitos como fade, slide e rotação para deixar a interface mais dinâmica e intuitiva.
+
+### Design Agradável 🎨
+- Utilização de gradientes e elementos decorativos (como círculos) para criar um visual moderno e elegante.
+- Layout responsivo que se adapta a diferentes tamanhos de tela.
+
+## Tecnologias Utilizadas 💻
+- React Native CLI
+- React Navigation para gerenciamento de telas.
+- TypeScript para tipagem estática e organização do código.
+- react-native-linear-gradient para criar efeitos de gradiente.
+- Animated API do React Native para as animações.
+
+## Estrutura do Projeto 📂
+- **App.tsx**  
+  Configura a navegação entre as telas e define os tipos dos parâmetros de cada rota.
+- **src/FormScreen.tsx**  
+  Tela onde o usuário insere os dados do produto. Contém as validações e animações que deixam a experiência mais fluida.
+- **src/ResultScreen.tsx**  
+  Tela que exibe os resultados do cálculo, mostrando de forma clara todos os valores e o impacto do aumento.
+- **Styles**  
+  Uso do StyleSheet para organizar os estilos e garantir a responsividade e o visual agradável do app.
+
+## Desafios e Aprendizados 📚
+
+### Validação de Dados
+Aprendi a importância de validar os inputs para evitar erros e garantir uma boa experiência para o usuário.
+
+### Animações
+Trabalhar com a API de animações do React Native foi bem interresante, e o resultado foi uma interface mais interativa e atrativa.
+
+### Navegação
+A utilização do React Navigation facilitou o gerenciamento das telas e a passagem de dados entre elas.
+
+### Design e Responsividade
+Investir em um layout moderno com gradientes e elementos decorativos fez toda a diferença na aparência do app.
+
+## Conclusão ✅
+Este projeto me permitiu colocar em prática diversos conceitos do desenvolvimento mobile com React Native, como a criação de telas, validação de dados, animações e a implementação de um design atrativo. Foi uma experiência enriquecedora que ampliou meus conhecimentos e me deixou mais confiante para desafios futuros.
+
+## Como Executar o Projeto 🚀
+
+### Clone o Repositório
+```bash
+git clone <link-do-repositorio>
+cd nome-do-projeto
+npm install
+
+**Se estiver rodando no iOS:**
+cd ios && pod install && cd ..
+
+npx react-native start
+npx react-native run-android
+
+**Para iOS:**
+npx react-native run-ios
+
+
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Desenvolvido por [Macauly Vivaldo da Silva]
