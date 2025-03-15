@@ -69,17 +69,18 @@ Este projeto me permitiu colocar em prática diversos conceitos do desenvolvimen
 
 ### Clone o Repositório
 ```bash
-git clone <link-do-repositorio>
-cd nome-do-projeto
+git clone <url-do-repositorio>
+cd pasta-do-projeto
 npm install
 
-**Se estiver rodando no iOS:**
+# Se utilizar iOS, execute também:
 cd ios && pod install && cd ..
 
+# Para Android
 npx react-native start
 npx react-native run-android
 
-**Para iOS:**
+# Para iOS
 npx react-native run-ios
 
 
